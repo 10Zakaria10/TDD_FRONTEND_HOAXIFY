@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
+import {HashRouter} from 'react-router-dom';
 import {UserSignUpPage} from './Pages/UserSignUpPage';
 import * as serviceWorker from './serviceWorker';
 import * as apiCalls from './api/ApiCalls';
@@ -10,9 +11,9 @@ const actions = {
   postSignUp : apiCalls.signUp
 }
 ReactDOM.render(
-  <React.StrictMode>
-    <UserSignUpPage actions= {actions} />
-  </React.StrictMode>,
+ <HashRouter>
+   <App/>
+ </HashRouter>,
   document.getElementById('root')
 );
 
