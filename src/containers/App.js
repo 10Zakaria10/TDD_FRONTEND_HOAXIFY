@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <Switch>
+        {/* homePage hna */}
       <Route exact path='/' component={Reservation} />
       <Route path='/login' component={LoginPage}/>
       <Route path='/signup' component={UserSignUpPage}/>
